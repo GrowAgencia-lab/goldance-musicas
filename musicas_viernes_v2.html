@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goldance 2026 - Músicas Viernes 03</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 15px; background: #f5f5f5; }
+  h1 { color: #1a73e8; text-align: center; font-size: 22px; }
+  .subtitulo { text-align: center; color: #666; margin-bottom: 20px; }
+  .reproductor { background: #e8f0fe; border: 1px solid #1a73e8; border-radius: 8px; padding: 12px; margin-bottom: 20px; display: none; }
+  .reproductor.activo { display: block; }
+  .reproductor p { margin: 0 0 8px 0; font-weight: bold; color: #1a73e8; }
+  audio { width: 100%; }
+  table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+  th { background: #1a73e8; color: white; padding: 10px 12px; text-align: left; font-size: 13px; }
+  tr:nth-child(even) { background: #f8f9fa; }
+  tr:hover { background: #e8f0fe; }
+  td { padding: 8px 12px; border-bottom: 1px solid #eee; vertical-align: middle; font-size: 13px; }
+  .num { font-weight: bold; color: #1a73e8; width: 40px; }
+  .nombre { font-size: 11px; color: #666; }
+  .btn-play { background: #34a853; color: white; border: none; padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 12px; white-space: nowrap; }
+  .btn-play:hover { background: #2d9248; }
+  .btn-play.reproduciendo { background: #ea4335; }
+  .btn-dl { background: #1a73e8; color: white; border: none; padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 12px; text-decoration: none; display: inline-block; white-space: nowrap; }
+  .btn-dl:hover { background: #1557b0; }
+  .vivo { background: #fff3e0 !important; }
+  .vivo td { color: #e65100; font-style: italic; }
+  .badge-vivo { background: #ff9800; color: white; padding: 3px 8px; border-radius: 10px; font-size: 11px; }
+  .contador { text-align: center; margin: 15px 0; font-size: 15px; }
+  .contador span { font-weight: bold; color: #1a73e8; }
+</style>
+</head>
+<body>
+
+<h1>🎵 Goldance 2026 — Músicas Viernes 03</h1>
+<p class="subtitulo">Escuchá antes de descargar • Orden actualizado</p>
+
+<div class="reproductor" id="reproductor">
+  <p id="titulo-actual">🎵 Reproduciendo...</p>
+  <audio id="audio-player" controls></audio>
+</div>
+
+<div class="contador">Total MP3: <span>78</span> &nbsp;|&nbsp; Música en vivo: <span>9</span></div>
+
+<table>
+  <tr>
+    <th>#</th>
+    <th>Nombre de la obra</th>
+    <th>Academia</th>
+    <th>Archivo final</th>
+    <th>▶</th>
+    <th>⬇</th>
+  </tr>
+  <tr>
+    <td class="num">1</td>
+    <td>A flor de piel</td>
+    <td>MARISOL VALDEZ ALBERDI</td>
+    <td class="nombre">01 - A flor de piel - MARISOL VALDEZ ALBERDI.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577161441615421577/A%20flor%20de%20piel%20.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577161441615421577/A%20flor%20de%20piel%20.mp3" download="01 - A flor de piel - MARISOL VALDEZ ALBERDI.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">2</td>
+    <td>Megance Andrea</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">02 - Megance Andrea - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576309032021938226/Megance%20Andrea%20-%20MOF.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576309032021938226/Megance%20Andrea%20-%20MOF.mp3" download="02 - Megance Andrea - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">3</td>
+    <td>Samba party</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">03 - Samba party - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576310052025561704/Samba%20Party-Ayesa-MOF.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576310052025561704/Samba%20Party-Ayesa-MOF.mp3" download="03 - Samba party - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">4</td>
+    <td>Susurro de la Noche</td>
+    <td>Antología Danza y Arte</td>
+    <td class="nombre">04 - Susurro de la Noche - Antología Danza y Arte.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6575429420667685220/Ayelen%20pyo%202025.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6575429420667685220/Ayelen%20pyo%202025.mp3" download="04 - Susurro de la Noche - Antología Danza y Arte.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">5</td>
+    <td>Nikiya's death</td>
+    <td>Escuela de danza Nathalia Hermosilla</td>
+    <td class="nombre">05 - Nikiya's death - Escuela de danza Nathalia Hermosilla.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6580474396229375084/inbound5508953166253056563.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6580474396229375084/inbound5508953166253056563.mp3" download="05 - Nikiya's death - Escuela de danza Nathalia Hermosilla.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr class="vivo"><td class="num">6</td><td>DESDE LO JONDO</td><td>Laura Troche Academia de Danzas</td><td colspan="3"><span class="badge-vivo">🎵 Música en vivo</span></td></tr>
+  <tr class="vivo"><td class="num">7</td><td>EL POLO DE TOBALO</td><td>Laura Troche Academia de Danzas</td><td colspan="3"><span class="badge-vivo">🎵 Música en vivo</span></td></tr>
+  <tr class="vivo"><td class="num">8</td><td>COMO EL AMARILLO ALBERO</td><td>Academia de Danza Pytyvo</td><td colspan="3"><span class="badge-vivo">🎵 Música en vivo</span></td></tr>
+  <tr>
+    <td class="num">9</td>
+    <td>Diversión en el bosque</td>
+    <td>Academia de danzas Chely Moreno</td>
+    <td class="nombre">09 - Diversión en el bosque - Academia de danzas Chely Moreno.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6567460135885398197/inbound8100684268071348446.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6567460135885398197/inbound8100684268071348446.mp3" download="09 - Diversión en el bosque - Academia de danzas Chely Moreno.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">10</td>
+    <td>La pantera rosa</td>
+    <td>Escuela de Arte Maria José Id</td>
+    <td class="nombre">10 - La pantera rosa - Escuela de Arte Maria José Id.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577043871417013076/Julieta%20Benitez%20-%20La%20pantera%20rosa%20.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577043871417013076/Julieta%20Benitez%20-%20La%20pantera%20rosa%20.mp3" download="10 - La pantera rosa - Escuela de Arte Maria José Id.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">11</td>
+    <td>Jai ho</td>
+    <td>Escuela de Arte Maria José Id</td>
+    <td class="nombre">11 - Jai ho - Escuela de Arte Maria José Id.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577046591418159166/Sof%C3%ADa%20C%C3%A1ceres%20-%20Jai%20Ho%20.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577046591418159166/Sof%C3%ADa%20C%C3%A1ceres%20-%20Jai%20Ho%20.mp3" download="11 - Jai ho - Escuela de Arte Maria José Id.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr class="vivo"><td class="num">12</td><td>Espejito, Espejito</td><td>Escuela de danza Nathalia Hermosilla</td><td colspan="3"><span class="badge-vivo">🎵 Música en vivo</span></td></tr>
+  <tr>
+    <td class="num">13</td>
+    <td>The one for the show</td>
+    <td>Jessica Torres Estudio</td>
+    <td class="nombre">13 - The one for the show - Jessica Torres Estudio.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6574346462559467475/inbound6877033691425856605.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6574346462559467475/inbound6877033691425856605.mp3" download="13 - The one for the show - Jessica Torres Estudio.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">14</td>
+    <td>La química del sentimiento</td>
+    <td>Jessica Torres Estudio</td>
+    <td class="nombre">14 - La química del sentimiento - Jessica Torres Estudio.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6574356942551960741/inbound390113341640282029.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6574356942551960741/inbound390113341640282029.mp3" download="14 - La química del sentimiento - Jessica Torres Estudio.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr class="vivo"><td class="num">15</td><td>DE LEVANTE</td><td>Laura Troche Academia de Danzas</td><td colspan="3"><span class="badge-vivo">🎵 Música en vivo</span></td></tr>
+  <tr class="vivo"><td class="num">16</td><td>BAMBERAS</td><td>Independiente</td><td colspan="3"><span class="badge-vivo">🎵 Música en vivo</span></td></tr>
+  <tr>
+    <td class="num">17</td>
+    <td>Fandango de Hulva</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">17 - Fandango de Hulva - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576372308775202555/Fandangos%20de%20Huelva%20-%20MARA%20Y%20CECI.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576372308775202555/Fandangos%20de%20Huelva%20-%20MARA%20Y%20CECI.mp3" download="17 - Fandango de Hulva - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">18</td>
+    <td>ZAPATEADO</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">18 - ZAPATEADO - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576947978773720197/Isabella%20Zapateado.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576947978773720197/Isabella%20Zapateado.mp3" download="18 - ZAPATEADO - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr class="vivo"><td class="num">19</td><td>Ojos claros como el agua</td><td>Laura Troche Academia de Danzas</td><td colspan="3"><span class="badge-vivo">🎵 Música en vivo</span></td></tr>
+  <tr class="vivo"><td class="num">20</td><td>Cantiñas</td><td>Academia de danzas Pytyvo</td><td colspan="3"><span class="badge-vivo">🎵 Música en vivo</span></td></tr>
+  <tr>
+    <td class="num">21</td>
+    <td>Expedición</td>
+    <td>Jessica Torres Estudio</td>
+    <td class="nombre">21 - Expedición - Jessica Torres Estudio.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6574365762555801224/inbound1311538933639087500.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6574365762555801224/inbound1311538933639087500.mp3" download="21 - Expedición - Jessica Torres Estudio.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">22</td>
+    <td>Bloom</td>
+    <td>Jessica Torres Estudio</td>
+    <td class="nombre">22 - Bloom - Jessica Torres Estudio.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6574370102559309311/inbound4802355065275469579.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6574370102559309311/inbound4802355065275469579.mp3" download="22 - Bloom - Jessica Torres Estudio.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">23</td>
+    <td>Quedarme contigo</td>
+    <td>Academia de danzas Chely Moreno</td>
+    <td class="nombre">23 - Quedarme contigo - Academia de danzas Chely Moreno.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6575084680213601810/Nahiara%20-%20Quedarme%20contigo.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6575084680213601810/Nahiara%20-%20Quedarme%20contigo.mp3" download="23 - Quedarme contigo - Academia de danzas Chely Moreno.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">24</td>
+    <td>I’m fabulous</td>
+    <td>Academia de danza Janet Magalí</td>
+    <td class="nombre">24 - I’m fabulous - Academia de danza Janet Magalí.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6582338832619064197/I%27m%20fabulous_Janet%20Magali_Solo.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6582338832619064197/I%27m%20fabulous_Janet%20Magali_Solo.mp3" download="24 - I’m fabulous - Academia de danza Janet Magalí.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">25</td>
+    <td>CONFESSION</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">25 - CONFESSION - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576117258777852173/CONFESSION-IVANNA.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576117258777852173/CONFESSION-IVANNA.mp3" download="25 - CONFESSION - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">26</td>
+    <td>The Queen yasmine</td>
+    <td>Escuela de danza Nathalia Hermosilla</td>
+    <td class="nombre">26 - The Queen yasmine - Escuela de danza Nathalia Hermosilla.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6575943807578547631/inbound2074844588524362224.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6575943807578547631/inbound2074844588524362224.mp3" download="26 - The Queen yasmine - Escuela de danza Nathalia Hermosilla.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">27</td>
+    <td>Travesía</td>
+    <td>Jessica Torres Estudio</td>
+    <td class="nombre">27 - Travesía - Jessica Torres Estudio.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6574363102557476514/inbound5134898651992653645.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6574363102557476514/inbound5134898651992653645.mp3" download="27 - Travesía - Jessica Torres Estudio.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">28</td>
+    <td>Remordimiento</td>
+    <td>Academia de danzas Chely Moreno</td>
+    <td class="nombre">28 - Remordimiento - Academia de danzas Chely Moreno.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6575086540216295329/Misael%20-%20Remordimiento.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6575086540216295329/Misael%20-%20Remordimiento.mp3" download="28 - Remordimiento - Academia de danzas Chely Moreno.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">29</td>
+    <td>Que mira, Que olé</td>
+    <td>Orué Danzas</td>
+    <td class="nombre">29 - Que mira, Que olé - Orué Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6582027781219777714/Que%20mira%2C%20que%20ol%C3%A9-%20Trio-%20Orue%20Danzas%20%28online-audio-converter.com%29.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6582027781219777714/Que%20mira%2C%20que%20ol%C3%A9-%20Trio-%20Orue%20Danzas%20%28online-audio-converter.com%29.mp3" download="29 - Que mira, Que olé - Orué Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">30</td>
+    <td>SEVILLANAS BOLERAS</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">30 - SEVILLANAS BOLERAS - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576950418779418186/SEVILLANAS-BOLERAS_1.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576950418779418186/SEVILLANAS-BOLERAS_1.mp3" download="30 - SEVILLANAS BOLERAS - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">31</td>
+    <td>Vida Corazon y Alma</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">31 - Vida Corazon y Alma - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576408098776336928/Vida%2C%20Coraz%C3%B3n%20y%20Alma%20-%20SOLO%20ANDREA.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576408098776336928/Vida%2C%20Coraz%C3%B3n%20y%20Alma%20-%20SOLO%20ANDREA.mp3" download="31 - Vida Corazon y Alma - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">32</td>
+    <td>MIRABRAS</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">32 - MIRABRAS - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576917108775665057/Isabella%20Solo%20Mirabr%C3%A1s.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576917108775665057/Isabella%20Solo%20Mirabr%C3%A1s.mp3" download="32 - MIRABRAS - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">33</td>
+    <td>Arlequinada</td>
+    <td>Paola Gauto Danza</td>
+    <td class="nombre">33 - Arlequinada - Paola Gauto Danza.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577055858118892433/Solista%20Analu%20Gauto%20Arlequinada.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577055858118892433/Solista%20Analu%20Gauto%20Arlequinada.mp3" download="33 - Arlequinada - Paola Gauto Danza.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">34</td>
+    <td>COLOMBIANAS</td>
+    <td>Academia de Danza Pytyvo</td>
+    <td class="nombre">34 - COLOMBIANAS - Academia de Danza Pytyvo.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576940418779996567/Solo%20Fiorella%20Medina%20Colombianas_%20Cante%20y%20Guitarra%20-%20El%20Trini.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576940418779996567/Solo%20Fiorella%20Medina%20Colombianas_%20Cante%20y%20Guitarra%20-%20El%20Trini.mp3" download="34 - COLOMBIANAS - Academia de Danza Pytyvo.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">35</td>
+    <td>Superfluo</td>
+    <td>Jessica Torres Estudio</td>
+    <td class="nombre">35 - Superfluo - Jessica Torres Estudio.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6574372492552228291/inbound10849609750593880.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6574372492552228291/inbound10849609750593880.mp3" download="35 - Superfluo - Jessica Torres Estudio.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">36</td>
+    <td>Made of light</td>
+    <td>Jessica Torres Estudio</td>
+    <td class="nombre">36 - Made of light - Jessica Torres Estudio.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6574407862553416041/inbound971439820041115948.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6574407862553416041/inbound971439820041115948.mp3" download="36 - Made of light - Jessica Torres Estudio.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">37</td>
+    <td>Guardianes del bosque</td>
+    <td>Academia de danzas Chely Moreno</td>
+    <td class="nombre">37 - Guardianes del bosque - Academia de danzas Chely Moreno.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6575250340214805035/Guardianes%20del%20bosque%20-%20Chely.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6575250340214805035/Guardianes%20del%20bosque%20-%20Chely.mp3" download="37 - Guardianes del bosque - Academia de danzas Chely Moreno.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">38</td>
+    <td>Trazos de pasion</td>
+    <td>Paola Gauto Danza</td>
+    <td class="nombre">38 - Trazos de pasion - Paola Gauto Danza.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576939358617384441/Solista%20Lujan%20Fernandez%20Trazos%20de%20una%20Pasion.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576939358617384441/Solista%20Lujan%20Fernandez%20Trazos%20de%20una%20Pasion.mp3" download="38 - Trazos de pasion - Paola Gauto Danza.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">39</td>
+    <td>Mañanitas paraguayas</td>
+    <td>Orué Danzas</td>
+    <td class="nombre">39 - Mañanitas paraguayas - Orué Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6582019447876202510/Ma%C3%B1anitas%20paraguayas-Mahia%20Salinas-Orue%20Danzas%20%28online-audio-converter.com%29.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6582019447876202510/Ma%C3%B1anitas%20paraguayas-Mahia%20Salinas-Orue%20Danzas%20%28online-audio-converter.com%29.mp3" download="39 - Mañanitas paraguayas - Orué Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">40</td>
+    <td>Dulce galopera</td>
+    <td>Escuela de Arte Maria José Id</td>
+    <td class="nombre">40 - Dulce galopera - Escuela de Arte Maria José Id.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576440851412075199/Sofia%20Benitez%20pyo%20ADC.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576440851412075199/Sofia%20Benitez%20pyo%20ADC.mp3" download="40 - Dulce galopera - Escuela de Arte Maria José Id.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">41</td>
+    <td>Mi niña juky</td>
+    <td>EMD Ñemby</td>
+    <td class="nombre">41 - Mi niña juky - EMD Ñemby.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6580690916719376543/AUD-20260619-WA0061.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6580690916719376543/AUD-20260619-WA0061.mp3" download="41 - Mi niña juky - EMD Ñemby.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">42</td>
+    <td>Pulgarcita</td>
+    <td>Compasses</td>
+    <td class="nombre">42 - Pulgarcita - Compasses.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6575984265113789035/Pulgarcita-Ambar-%20Compasses%20Sacramento.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6575984265113789035/Pulgarcita-Ambar-%20Compasses%20Sacramento.mp3" download="42 - Pulgarcita - Compasses.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">43</td>
+    <td>Lullaby</td>
+    <td>Jessica Torres Estudio</td>
+    <td class="nombre">43 - Lullaby - Jessica Torres Estudio.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576084266322506996/inbound7096735675387289423.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576084266322506996/inbound7096735675387289423.mp3" download="43 - Lullaby - Jessica Torres Estudio.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">44</td>
+    <td>Curos tus Labios</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">44 - Curos tus Labios - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576104968777065803/CURO-TUS-LABIOS-ADRIANA.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576104968777065803/CURO-TUS-LABIOS-ADRIANA.mp3" download="44 - Curos tus Labios - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">45</td>
+    <td>Mburika ojerokyseva</td>
+    <td>Orué Danzas</td>
+    <td class="nombre">45 - Mburika ojerokyseva - Orué Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576458405418630415/Mburika%20ojerokyseva-conjunto-Orue%20Danzas.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576458405418630415/Mburika%20ojerokyseva-conjunto-Orue%20Danzas.mp3" download="45 - Mburika ojerokyseva - Orué Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">46</td>
+    <td>Ka'a jaryi</td>
+    <td>Orué Danzas</td>
+    <td class="nombre">46 - Ka'a jaryi - Orué Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6582024971217926063/Ka%27a%20jaryi-Ana%20L%C3%B3pez-Orue%20Danzas.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6582024971217926063/Ka%27a%20jaryi-Ana%20L%C3%B3pez-Orue%20Danzas.mp3" download="46 - Ka'a jaryi - Orué Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">47</td>
+    <td>CARACOLES</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">47 - CARACOLES - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576918188776458407/Paola%20Caracoles.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576918188776458407/Paola%20Caracoles.mp3" download="47 - CARACOLES - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">48</td>
+    <td>POR TANGOS</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">48 - POR TANGOS - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576924388778185571/Tangos%20-%20VALERIA.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576924388778185571/Tangos%20-%20VALERIA.mp3" download="48 - POR TANGOS - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">49</td>
+    <td>FLAMENQUITAS</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">49 - FLAMENQUITAS - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576958358779228895/DUO-KOKO-Y-VALE.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576958358779228895/DUO-KOKO-Y-VALE.mp3" download="49 - FLAMENQUITAS - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">50</td>
+    <td>Leyenda Flamenca</td>
+    <td>Jessica Torres Estudio</td>
+    <td class="nombre">50 - Leyenda Flamenca - Jessica Torres Estudio.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6574410212556493510/inbound1884621779448437349.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6574410212556493510/inbound1884621779448437349.mp3" download="50 - Leyenda Flamenca - Jessica Torres Estudio.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">51</td>
+    <td>Con aires de Cuba</td>
+    <td>Orué Danzas</td>
+    <td class="nombre">51 - Con aires de Cuba - Orué Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576440895412847097/Con%20aires%20de%20cuba-Conjunto-Orue%20Danzas%20.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576440895412847097/Con%20aires%20de%20cuba-Conjunto-Orue%20Danzas%20.mp3" download="51 - Con aires de Cuba - Orué Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">52</td>
+    <td>Digital Queen</td>
+    <td>Paola Gauto Danza</td>
+    <td class="nombre">52 - Digital Queen - Paola Gauto Danza.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576970028614116813/Solista%20Analu%20Gauto%20Digital%20Queen.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576970028614116813/Solista%20Analu%20Gauto%20Digital%20Queen.mp3" download="52 - Digital Queen - Paola Gauto Danza.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">53</td>
+    <td>Vendedora de mandarina</td>
+    <td>Paola Gauto Danza</td>
+    <td class="nombre">53 - Vendedora de mandarina - Paola Gauto Danza.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577052038119974749/Solista%20Sofia%20Gonzalez%20Vendedora%20de%20mandarinas.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577052038119974749/Solista%20Sofia%20Gonzalez%20Vendedora%20de%20mandarinas.mp3" download="53 - Vendedora de mandarina - Paola Gauto Danza.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">54</td>
+    <td>Anxiety</td>
+    <td>Paola Gauto Danza</td>
+    <td class="nombre">54 - Anxiety - Paola Gauto Danza.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577043148112467672/Solista%20Ana%20Anxiety.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577043148112467672/Solista%20Ana%20Anxiety.mp3" download="54 - Anxiety - Paola Gauto Danza.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">55</td>
+    <td>COMO LAS OLAS DEL MAR</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">55 - COMO LAS OLAS DEL MAR - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576928488774875739/Como%20las%20Olas%20del%20Mar%20%28Canti%C3%B1as%29.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576928488774875739/Como%20las%20Olas%20del%20Mar%20%28Canti%C3%B1as%29.mp3" download="55 - COMO LAS OLAS DEL MAR - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">56</td>
+    <td>Danza de la Botella</td>
+    <td>Escuela de Arte Maria José Id</td>
+    <td class="nombre">56 - Danza de la Botella - Escuela de Arte Maria José Id.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576458471416213842/Sofia%20Benitez%20pyo%20ADC.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576458471416213842/Sofia%20Benitez%20pyo%20ADC.mp3" download="56 - Danza de la Botella - Escuela de Arte Maria José Id.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">57</td>
+    <td>Danza de la botella</td>
+    <td>Escuela de Arte Maria José Id</td>
+    <td class="nombre">57 - Danza de la botella - Escuela de Arte Maria José Id.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576461141416335138/Mei%20solista%20paraguayo%20botella.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576461141416335138/Mei%20solista%20paraguayo%20botella.mp3" download="57 - Danza de la botella - Escuela de Arte Maria José Id.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">58</td>
+    <td>De Cai hasta la Habana</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">58 - De Cai hasta la Habana - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576416778779846705/DE%20CAI%20HASTA%20LA%20HABANA%20-%20SOLO%20ADRI%20GUAJIRAS.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576416778779846705/DE%20CAI%20HASTA%20LA%20HABANA%20-%20SOLO%20ADRI%20GUAJIRAS.mp3" download="58 - De Cai hasta la Habana - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">59</td>
+    <td>El sonido de mi tierra</td>
+    <td>Paola Gauto Danza</td>
+    <td class="nombre">59 - El sonido de mi tierra - Paola Gauto Danza.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577066118119946307/Solista%20Mia%20Sonidos%20de%20mi%20pueblo.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577066118119946307/Solista%20Mia%20Sonidos%20de%20mi%20pueblo.mp3" download="59 - El sonido de mi tierra - Paola Gauto Danza.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">60</td>
+    <td>Dulce aroma guaraní</td>
+    <td>Orué Danzas</td>
+    <td class="nombre">60 - Dulce aroma guaraní - Orué Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576443315414960941/Dulce%20Aroma%20Guaran%C3%AD-%20Nicole%20Jara-%20Orue%20Danzas%20.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576443315414960941/Dulce%20Aroma%20Guaran%C3%AD-%20Nicole%20Jara-%20Orue%20Danzas%20.mp3" download="60 - Dulce aroma guaraní - Orué Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">61</td>
+    <td>La magia de blancanieves</td>
+    <td>Paola Gauto Danza</td>
+    <td class="nombre">61 - La magia de blancanieves - Paola Gauto Danza.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576935578611065653/Solista-Paula-Berton-Blancanieves.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576935578611065653/Solista-Paula-Berton-Blancanieves.mp3" download="61 - La magia de blancanieves - Paola Gauto Danza.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">62</td>
+    <td>CARACOLES BOLEROS</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">62 - CARACOLES BOLEROS - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576951758771924686/Caracoles%20BOLEROS.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576951758771924686/Caracoles%20BOLEROS.mp3" download="62 - CARACOLES BOLEROS - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">63</td>
+    <td>JALEO DE JEREZ</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">63 - JALEO DE JEREZ - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576945938773882126/SOLO-PAZ-SITZMANN.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576945938773882126/SOLO-PAZ-SITZMANN.mp3" download="63 - JALEO DE JEREZ - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">64</td>
+    <td>JALEO DE LA MACARENA</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">64 - JALEO DE LA MACARENA - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576946838774136623/AILEN-JALEO-DE-A-MACARENA.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576946838774136623/AILEN-JALEO-DE-A-MACARENA.mp3" download="64 - JALEO DE LA MACARENA - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">65</td>
+    <td>Divergente</td>
+    <td>Escuela de Arte Maria José Id</td>
+    <td class="nombre">65 - Divergente - Escuela de Arte Maria José Id.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577048381419322744/Chiara%20Orue%20-%20Divergente%20.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577048381419322744/Chiara%20Orue%20-%20Divergente%20.mp3" download="65 - Divergente - Escuela de Arte Maria José Id.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">66</td>
+    <td>Lets genial loud</td>
+    <td>Escuela de Arte Maria José Id</td>
+    <td class="nombre">66 - Lets genial loud - Escuela de Arte Maria José Id.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577058735021209243/Lets%20Get%20Loud%20-%20Jennifer%20Lopez%20-%20Short%20Version.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577058735021209243/Lets%20Get%20Loud%20-%20Jennifer%20Lopez%20-%20Short%20Version.mp3" download="66 - Lets genial loud - Escuela de Arte Maria José Id.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">67</td>
+    <td>Casi algo</td>
+    <td>Orué Danzas</td>
+    <td class="nombre">67 - Casi algo - Orué Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576926545416191763/Casi%20algo-D%C3%BAo-Orue%20Danzas%20%28online-audio-converter.com%29.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576926545416191763/Casi%20algo-D%C3%BAo-Orue%20Danzas%20%28online-audio-converter.com%29.mp3" download="67 - Casi algo - Orué Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">68</td>
+    <td>PERSONAS REALES</td>
+    <td>Orué Danzas</td>
+    <td class="nombre">68 - PERSONAS REALES - Orué Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576955438773434150/CA%C3%91A-SOLO-FLAMENCO-ORUE.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576955438773434150/CA%C3%91A-SOLO-FLAMENCO-ORUE.mp3" download="68 - PERSONAS REALES - Orué Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">69</td>
+    <td>Ñanduti de ensueño</td>
+    <td>Paola Gauto Danza</td>
+    <td class="nombre">69 - Ñanduti de ensueño - Paola Gauto Danza.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577040558112584690/Solista%20Encanto%20de%20%C3%91anduti%20Aylen%20Pyo.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577040558112584690/Solista%20Encanto%20de%20%C3%91anduti%20Aylen%20Pyo.mp3" download="69 - Ñanduti de ensueño - Paola Gauto Danza.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">70</td>
+    <td>Superstar</td>
+    <td>Escuela de Arte Maria José Id</td>
+    <td class="nombre">70 - Superstar - Escuela de Arte Maria José Id.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577050281414485291/Mei%20Melgarejo-%20Superstar%20.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577050281414485291/Mei%20Melgarejo-%20Superstar%20.mp3" download="70 - Superstar - Escuela de Arte Maria José Id.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">71</td>
+    <td>Aire Español</td>
+    <td>Instituto de arte olga doldan</td>
+    <td class="nombre">71 - Aire Español - Instituto de arte olga doldan.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576013420524257682/SARAH%20TORRES%20-%20AIRE%20ESPA%C3%91OL%20-%20CLASICO%20LIBRE%20-%20OLGA%20DOLDAN.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576013420524257682/SARAH%20TORRES%20-%20AIRE%20ESPA%C3%91OL%20-%20CLASICO%20LIBRE%20-%20OLGA%20DOLDAN.mp3" download="71 - Aire Español - Instituto de arte olga doldan.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">72</td>
+    <td>Power</td>
+    <td>Paola Gauto Danza</td>
+    <td class="nombre">72 - Power - Paola Gauto Danza.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576937498611494437/Solista-Sofia-Gonzalez-Power.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576937498611494437/Solista-Sofia-Gonzalez-Power.mp3" download="72 - Power - Paola Gauto Danza.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">73</td>
+    <td>El vuelo del pajaro campana</td>
+    <td>Orué Danzas</td>
+    <td class="nombre">73 - El vuelo del pajaro campana - Orué Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577817627707064265/El%20vuelo%20del%20p%C3%A1jaro%20campana.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577817627707064265/El%20vuelo%20del%20p%C3%A1jaro%20campana.mp3" download="73 - El vuelo del pajaro campana - Orué Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">74</td>
+    <td>TEMPLE</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">74 - TEMPLE - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576935588776398085/TEMPLE%20-%20GRUPAL%20LT.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576935588776398085/TEMPLE%20-%20GRUPAL%20LT.mp3" download="74 - TEMPLE - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">75</td>
+    <td>Danza de la botella</td>
+    <td>Escuela de Arte Maria José Id</td>
+    <td class="nombre">75 - Danza de la botella - Escuela de Arte Maria José Id.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577034021418766287/Ana%20paula%20fernandez%20pyo%20ADC.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577034021418766287/Ana%20paula%20fernandez%20pyo%20ADC.mp3" download="75 - Danza de la botella - Escuela de Arte Maria José Id.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">76</td>
+    <td>Rehilete de papel</td>
+    <td>Instituto de arte olga doldan</td>
+    <td class="nombre">76 - Rehilete de papel - Instituto de arte olga doldan.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261404491779667/6576016130528729498/SARAH%20TORRES%20-%20REHILETE%20DE%20PAPEL%20-%20CONTEMPO%20-%20OLGA%20DOLDAN.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261404491779667/6576016130528729498/SARAH%20TORRES%20-%20REHILETE%20DE%20PAPEL%20-%20CONTEMPO%20-%20OLGA%20DOLDAN.mp3" download="76 - Rehilete de papel - Instituto de arte olga doldan.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">77</td>
+    <td>Mainumby jeroky</td>
+    <td>Paola Gauto Danza</td>
+    <td class="nombre">77 - Mainumby jeroky - Paola Gauto Danza.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577053508118554310/Solista%20Analu%20Gauto%20Mainumby%20Jeroky.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577053508118554310/Solista%20Analu%20Gauto%20Mainumby%20Jeroky.mp3" download="77 - Mainumby jeroky - Paola Gauto Danza.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">78</td>
+    <td>En busca del Tesoro</td>
+    <td>Paola Gauto Danza</td>
+    <td class="nombre">78 - En busca del Tesoro - Paola Gauto Danza.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576972038616228518/Solista%20Lujan%20Fernandez-%20En%20busca%20del%20tesoro.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576972038616228518/Solista%20Lujan%20Fernandez-%20En%20busca%20del%20tesoro.mp3" download="78 - En busca del Tesoro - Paola Gauto Danza.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">79</td>
+    <td>Danza de la Botella</td>
+    <td>Escuela de Arte Maria José Id</td>
+    <td class="nombre">79 - Danza de la Botella - Escuela de Arte Maria José Id.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577038751417724106/Selecci%C3%B3n%20de%20Polcas.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577038751417724106/Selecci%C3%B3n%20de%20Polcas.mp3" download="79 - Danza de la Botella - Escuela de Arte Maria José Id.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">80</td>
+    <td>Porcelana sobre lienzo</td>
+    <td>Instituto de arte olga doldan</td>
+    <td class="nombre">80 - Porcelana sobre lienzo - Instituto de arte olga doldan.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6579714550522953130/CAMILA%20GALEANO%20-%20PORCELANA%20SOBRE%20LIENZO%20-%20CLASICO%20LIBRE.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6579714550522953130/CAMILA%20GALEANO%20-%20PORCELANA%20SOBRE%20LIENZO%20-%20CLASICO%20LIBRE.mp3" download="80 - Porcelana sobre lienzo - Instituto de arte olga doldan.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">81</td>
+    <td>Selvática</td>
+    <td>Instituto de arte olga doldan</td>
+    <td class="nombre">81 - Selvática - Instituto de arte olga doldan.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6579716610528061379/CAMILA%20GALEANO%20-%20SELVATICA%20-%20CONTEMPO%20-%20OLGA%20DOLDAN.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6579716610528061379/CAMILA%20GALEANO%20-%20SELVATICA%20-%20CONTEMPO%20-%20OLGA%20DOLDAN.mp3" download="81 - Selvática - Instituto de arte olga doldan.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">82</td>
+    <td>Danza de la Botella</td>
+    <td>Escuela de Arte Maria José Id</td>
+    <td class="nombre">82 - Danza de la Botella - Escuela de Arte Maria José Id.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577040791418290844/AUD-20250616-WA0007.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577040791418290844/AUD-20250616-WA0007.mp3" download="82 - Danza de la Botella - Escuela de Arte Maria José Id.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">83</td>
+    <td>Viaje en tren</td>
+    <td>Paola Gauto Danza</td>
+    <td class="nombre">83 - Viaje en tren - Paola Gauto Danza.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6577063838117149423/Solista%20Lujan%20Fernandez%20Esperando%20el%20Tren%20%281%29.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6577063838117149423/Solista%20Lujan%20Fernandez%20Esperando%20el%20Tren%20%281%29.mp3" download="83 - Viaje en tren - Paola Gauto Danza.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">84</td>
+    <td>MAGIA DE ÑANDUTI</td>
+    <td>Laura Troche Academia de Danzas</td>
+    <td class="nombre">84 - MAGIA DE ÑANDUTI - Laura Troche Academia de Danzas.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6576953738777498353/MAGIA-DE-%C3%91ANDUTI-ISA-Y-ANDRE.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6576953738777498353/MAGIA-DE-%C3%91ANDUTI-ISA-Y-ANDRE.mp3" download="84 - MAGIA DE ÑANDUTI - Laura Troche Academia de Danzas.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr class="vivo"><td class="num">85</td><td>Variación de Ballet</td><td>Escuela Municipal de Danza - IMA Asunción</td><td colspan="3"><span class="badge-vivo">🎵 Música en vivo</span></td></tr>
+  <tr>
+    <td class="num">86</td>
+    <td>Endless devotion</td>
+    <td>Team Elite Cascanueces</td>
+    <td class="nombre">86 - Endless devotion - Team Elite Cascanueces.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6585554390413017030/Endless%20Devotion%20Luisana%20.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6585554390413017030/Endless%20Devotion%20Luisana%20.mp3" download="86 - Endless devotion - Team Elite Cascanueces.mp3">⬇ Descargar</a></td>
+  </tr>
+  <tr>
+    <td class="num">87</td>
+    <td>Where I dissappear</td>
+    <td>Team Elite Cascanueces</td>
+    <td class="nombre">87 - Where I dissappear - Team Elite Cascanueces.mp3</td>
+    <td><button class="btn-play" onclick="reproducir(this, 'https://www.jotform.com/uploads/rebe1208/261694359061665/6585552010411251523/Where%20I%20dissappear%20_%20Arami%20C.mp3')">▶ Escuchar</button></td>
+    <td><a class="btn-dl" href="https://www.jotform.com/uploads/rebe1208/261694359061665/6585552010411251523/Where%20I%20dissappear%20_%20Arami%20C.mp3" download="87 - Where I dissappear - Team Elite Cascanueces.mp3">⬇ Descargar</a></td>
+  </tr>
+</table>
+
+<script>
+var audioPlayer = document.getElementById('audio-player');
+var reproductor = document.getElementById('reproductor');
+var tituloActual = document.getElementById('titulo-actual');
+var btnActual = null;
+
+function reproducir(btn, url) {
+  if (btnActual && btnActual !== btn) {
+    btnActual.textContent = '▶ Escuchar';
+    btnActual.classList.remove('reproduciendo');
+  }
+  
+  if (audioPlayer.src === url && !audioPlayer.paused) {
+    audioPlayer.pause();
+    btn.textContent = '▶ Escuchar';
+    btn.classList.remove('reproduciendo');
+    btnActual = null;
+    return;
+  }
+  
+  var fila = btn.closest('tr');
+  var numObra = fila.cells[0].textContent;
+  var nombreObra = fila.cells[1].textContent;
+  
+  audioPlayer.src = url;
+  audioPlayer.play();
+  tituloActual.textContent = '🎵 #' + numObra + ' — ' + nombreObra;
+  reproductor.classList.add('activo');
+  btn.textContent = '⏸ Pausar';
+  btn.classList.add('reproduciendo');
+  btnActual = btn;
+  
+  reproductor.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  
+  audioPlayer.onended = function() {
+    btn.textContent = '▶ Escuchar';
+    btn.classList.remove('reproduciendo');
+    btnActual = null;
+  };
+}
+</script>
+</body>
+</html>
